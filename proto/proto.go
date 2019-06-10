@@ -104,6 +104,7 @@ func UnPacket(r io.Reader)  error {
 	}
 	buf := bytes.NewBuffer(b)
 	binary.Read(buf,binary.BigEndian,header)
+	//buf := bytes.NewReader(b)
 	//header.MagicNumber = b[0]
 	//header.Version = b[1]
 	//header.SeriaType = binary.BigEndian.Uint16(b[2:4])
